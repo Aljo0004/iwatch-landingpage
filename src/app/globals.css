@@ -1,6 +1,4 @@
-@import "tailwindcss";
-
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -10,7 +8,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -18,9 +16,180 @@
     --foreground: #ededed;
   }
 }
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #b6ccda;
+margin: 40px;
+margin-top: 20px;
+}
+/************************ GRID ************************/
+.grid {
+  height: 95vh;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+/************************ HEADER ************************/
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  grid-column: 1 / -1;
+  width: 100%;
+  place-self: start;
+}
+
+/*HeaderSearch*/
+.headersearch {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+.line {
+  border-right: 1px solid white;
+  height: 25px;
+  margin-right: 5px;
+}
+
+/*HeaderMenu*/
+.headermenu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: transparent;
+  color: white;
+}
+.headermenu :nth-child(4) {
+  background-color: white;
+  color: #B6CCDA;
+}
+
+/************************ MIDDLESECTION ************************/
+
+/*Text*/
+.text {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  align-self: center;
+  font-size: 36px;
+  color: white;
+}
+.text :last-child {
+  font-weight: lighter;
+}
+/*BigImage*/
+.bigimage {
+  height: auto;
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;
+  place-self: center;
+}
+
+
+/*ColorSwitch*/
+.colorswitch {
+  margin-top: 50px;
+  align-self: center;
+}
+
+/************************ LAST SECTION ************************/
+
+/*BuyButton*/
+.buybutton {
+      grid-column: 1 / 2;
+  grid-row: 3 / 4;
+      place-self: start start;
+}
+h2 {
+  border: solid 1px white;
+  padding: 15px 50px; 
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  margin: 0;
+}
+
+/*Number*/
+.arrowsandnumber {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  place-self: end start;
+  color: white;
+  font-size: 18px;
+}
+
+/*Watches*/
+.watches {
+  display: flex;
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  place-self: end center;
+  gap: 40px;
+}
+
+/*BlackWatch*/
+.blackwatch {
+position: relative;;
+}
+.blackwatch::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  right: -10px;
+  height: 75%;
+  background-color: rgba(67, 69, 88, 0.6);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+/*GreenWatch*/
+.greenwatch {
+position: relative;;
+}
+.greenwatch::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  right: -10px;
+  height: 75%;
+  background-color: rgba(106, 221, 204, 0.6);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+/*SalmonWatch*/
+.salmonwatch {
+position: relative;;
+}
+.salmonwatch::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  right: -10px;
+  height: 75%;
+  background-color: rgba(249, 205, 196, 0.6);
+  border-radius: 10px;
+  z-index: -1;
 }
