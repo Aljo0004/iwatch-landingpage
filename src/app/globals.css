@@ -23,7 +23,7 @@ img {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #b6ccda;
+background: linear-gradient(135deg, #C8DCE5 0%, #B6CCDA 100%);
 margin: 40px;
 margin-top: 20px;
 }
