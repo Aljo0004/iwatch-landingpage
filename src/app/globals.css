@@ -77,9 +77,11 @@ button {
   background-color: transparent;
   color: white;
 }
-.headermenu :nth-child(4) {
+
+button:hover {
   background-color: white;
   color: #B6CCDA;
+  transition: 0.2s;
 }
 
 /************************ MIDDLESECTION ************************/
@@ -97,17 +99,55 @@ button {
 }
 /*BigImage*/
 .bigimage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+place-self: center;
   height: auto;
   grid-column: 2 / 3;
-  grid-row: 2 / 4;
-  place-self: center;
+  grid-row: 2 / 5;
+  /* place-self: center; */
+}
+.bigimage :last-child {
+  align-self: center;
 }
 
 
 /*ColorSwitch*/
 .colorswitch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  grid-column: 3 / 4; 
+  grid-row: 2 / 3;
+  place-self: center center;
   margin-top: 50px;
-  align-self: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.circle-black {
+  background-color: #434558;
+}
+
+.circle-green {
+  background-color: #6ADDCC;
+}
+
+.circle-salmon {
+  background-color: #F9CDC4;
+}
+
+.dotted-line {
+  width: 2px;
+  height: 20px;
+  border-left: 2px dotted white;
 }
 
 /************************ LAST SECTION ************************/
@@ -148,8 +188,14 @@ h2 {
 
 /*BlackWatch*/
 .blackwatch {
-position: relative;;
+position: relative;
+cursor: pointer;
 }
+.blackwatch :hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
 .blackwatch::before {
   content: '';
   position: absolute;
@@ -164,7 +210,12 @@ position: relative;;
 
 /*GreenWatch*/
 .greenwatch {
-position: relative;;
+position: relative;
+cursor: pointer;
+}
+.greenwatch :hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 .greenwatch::before {
   content: '';
@@ -180,7 +231,12 @@ position: relative;;
 
 /*SalmonWatch*/
 .salmonwatch {
-position: relative;;
+position: relative;
+cursor: pointer;
+}
+.salmonwatch :hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 .salmonwatch::before {
   content: '';

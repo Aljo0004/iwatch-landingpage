@@ -19,7 +19,6 @@ export default function Home() {
       <ColorSwitch />
       <BuyButton />
       <Number />
-      <Watches />
     </div>
   );
 }
