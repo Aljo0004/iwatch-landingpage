@@ -1,18 +1,13 @@
 import Image from "next/image";
+import { CiSearch } from "react-icons/ci";
+import { RiShoppingBag4Fill } from "react-icons/ri";
 
 const HeaderSearch = () => {
   return (
     <div className="headersearch">
-      <Image src="/search.png" 
-      alt="Search Icon" 
-      width={30} 
-      height={30} />
-<div className="line"></div>
-      <Image src="/shopping-bag.png" 
-      alt="Shopping Bag Icon" 
-      width={30}
-      height={30}
-      />
+      <CiSearch size={30} color="white"/>
+      <div className="line"></div>
+      <RiShoppingBag4Fill size={30} color="white" />
     </div>
   );
 };

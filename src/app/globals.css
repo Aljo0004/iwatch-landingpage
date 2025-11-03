@@ -101,17 +101,28 @@ button:hover {
 .bigimage {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-place-self: center;
+  place-self: center;
   height: auto;
-  grid-column: 2 / 3;
+  grid-column: 2 / 4;
   grid-row: 2 / 5;
-  /* place-self: center; */
 }
+
 .bigimage :last-child {
   align-self: center;
 }
 
+.imagecolorflex {
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+justify-items: center;
+}
+
+
+
+.colorswitch div {
+  cursor: pointer; 
+}
 
 /*ColorSwitch*/
 .colorswitch {
@@ -119,17 +130,26 @@ place-self: center;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  grid-column: 3 / 4; 
-  grid-row: 2 / 3;
+  grid-column: 4; 
+  /* grid-row: 2 / 3; */
   place-self: center center;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .circle {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid transparent;
+}
+.circle:hover{
+  transition: 0.3s;
+  transform: scale(1.5);
+  border-color: white;
+}
+.circle.active {
+  border-color: white;
+  transform: scale(1.5);
 }
 
 .circle-black {
@@ -180,9 +200,7 @@ h2 {
 /*Watches*/
 .watches {
   display: flex;
-  grid-column: 2 / 3;
-  grid-row: 4 / 5;
-  place-self: end center;
+  place-self:center;
   gap: 40px;
 }
 

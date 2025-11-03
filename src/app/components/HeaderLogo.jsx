@@ -1,11 +1,8 @@
 import Image from "next/image";
+import { DiApple } from "react-icons/di";
 
 const HeaderLogo = () => {
-  return <Image 
-  src="/applelogo.png"
-  alt="Apple Logo"
-    width={50}
-    height={50}
+  return <DiApple size={50} color="white"
   />;
 };
 

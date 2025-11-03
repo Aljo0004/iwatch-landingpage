@@ -16,7 +16,6 @@ export default function Home() {
       </div>
       <Text />
       <BigImage />
-      <ColorSwitch />
       <BuyButton />
       <Number />
     </div>
