@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -9,6 +12,15 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 } */
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --secondary: black;
+    --green: #6ADDCC;
+    --sal: #F9CDC4;
+    --initwatch: #434558;
+    --hovertext: #B6CCDA;
+  }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -16,6 +28,23 @@
     --foreground: #ededed;
   }
 }
+h1,
+h2, h3, h4, h5, h6, p, button {
+  color: white;
+}
+button {
+  font-size: 1rem;
+}
+
+h1
+{
+    font-size: 5rem;
+}
+h2 {
+    font-weight: lighter;
+    font-size: 5rem;
+}
+
 img {
     overflow-clip-margin: content-box;
     overflow: clip;
@@ -28,16 +57,16 @@ margin: 40px;
 margin-top: 20px;
 }
 /************************ GRID ************************/
-.grid {
+/* .grid {
   height: 95vh;
   display: grid;
   grid-template-columns: 1.5fr 1fr 0.1fr;
   grid-template-rows: repeat(4, 1fr);
-}
+} */
 
 /************************ HEADER ************************/
 
-.header {
+/* .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,10 +74,10 @@ margin-top: 20px;
   grid-column: 1 / -1;
   width: 100%;
   place-self: start;
-}
+} */
 
 /*HeaderSearch*/
-.headersearch {
+/* .headersearch {
   display: flex;
   gap: 15px;
   align-items: center;
@@ -58,10 +87,10 @@ margin-top: 20px;
   border-right: 1px solid white;
   height: 25px;
   margin-right: 5px;
-}
+} */
 
 /*HeaderMenu*/
-.headermenu {
+/* .headermenu {
   display: flex;
   gap: 30px;
   align-items: center;
@@ -82,12 +111,12 @@ button:hover {
   background-color: white;
   color: #B6CCDA;
   transition: 0.2s;
-}
+} */
 
 /************************ MIDDLESECTION ************************/
 
 /*Text*/
-.text {
+/* .text {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   align-self: center;
@@ -96,9 +125,9 @@ button:hover {
 }
 .text :last-child {
   font-weight: lighter;
-}
+} */
 /*BigImage*/
-.bigimage {
+/* .bigimage {
   display: flex;
   flex-direction: column;
   place-self: center;
@@ -122,18 +151,17 @@ justify-items: center;
 
 .colorswitch div {
   cursor: pointer; 
-}
+} */
 
 /*ColorSwitch*/
-.colorswitch {
+/* .colorswitch {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   grid-column: 4; 
-  /* grid-row: 2 / 3; */
   place-self: center center;
-  /* margin-top: 50px; */
+
 }
 
 .circle {
@@ -168,12 +196,12 @@ justify-items: center;
   width: 2px;
   height: 20px;
   border-left: 2px dotted white;
-}
+} */
 
 /************************ LAST SECTION ************************/
 
 /*BuyButton*/
-.buybutton {
+/* .buybutton {
       grid-column: 1 / 2;
   grid-row: 3 / 4;
       place-self: start start;
@@ -186,26 +214,26 @@ h2 {
   display: inline-block;
   color: white;
   margin: 0;
-}
+} */
 
 /*Number*/
-.arrowsandnumber {
+/* .arrowsandnumber {
   grid-column: 1 / 2;
   grid-row: 4 / 5;
   place-self: end start;
   color: white;
   font-size: 18px;
-}
+} */
 
 /*Watches*/
-.watches {
+/* .watches {
   display: flex;
   place-self:center;
   gap: 40px;
-}
+} */
 
 /*BlackWatch*/
-.blackwatch {
+/* .blackwatch {
 position: relative;
 cursor: pointer;
 }
@@ -224,10 +252,10 @@ cursor: pointer;
   background-color: rgba(67, 69, 88, 0.6);
   border-radius: 10px;
   z-index: -1;
-}
+} */
 
 /*GreenWatch*/
-.greenwatch {
+/* .greenwatch {
 position: relative;
 cursor: pointer;
 }
@@ -245,10 +273,10 @@ cursor: pointer;
   background-color: rgba(106, 221, 204, 0.6);
   border-radius: 10px;
   z-index: -1;
-}
+} */
 
 /*SalmonWatch*/
-.salmonwatch {
+/* .salmonwatch {
 position: relative;
 cursor: pointer;
 }
@@ -266,4 +294,4 @@ cursor: pointer;
   background-color: rgba(249, 205, 196, 0.6);
   border-radius: 10px;
   z-index: -1;
-}
+} */

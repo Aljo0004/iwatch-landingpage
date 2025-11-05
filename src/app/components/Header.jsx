@@ -4,7 +4,7 @@ import HeaderSearch from "./HeaderSearch";
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className="col-span-full w-full flex flex-row items-center place-self-start justify-between">
         <HeaderLogo />
       <HeaderMenu />
         <HeaderSearch />

@@ -17,12 +17,23 @@ else return "/navy.png";
   };
 
   return (
-    <div className="bigimage">
-      <div className="imagecolorflex">
-        <Image src={getWatchImage()} alt="Black Watch" width={450} height={450} />
-        <ColorSwitch selectedWatch={selectedWatch} setSelectedWatch={setSelectedWatch} />
+    <div className="col-span-2 col-start-2 row-span-3 row-start-2 flex flex-col">
+      <div className="grid grid-cols-2 items-center justify-items-center">
+        <Image className="justify-self-start ml-[2.5rem] mb-[2rem] mt-[-2rem]"
+          src={getWatchImage()}
+          alt="Black Watch"
+          width={450}
+          height={450}
+        />
+        <ColorSwitch
+          selectedWatch={selectedWatch}
+          setSelectedWatch={setSelectedWatch}
+        />
       </div>
-      <Watches selectedWatch={selectedWatch} setSelectedWatch={setSelectedWatch} />
+      <Watches
+        selectedWatch={selectedWatch}
+        setSelectedWatch={setSelectedWatch}
+      />
       {/* selectedWatch= er prop navnet (hvad Watches komponenten modtager det som)
 {selectedWatch} er værdien (den state variabel du definerede i BigImage) */}
     </div>

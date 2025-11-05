@@ -10,10 +10,8 @@ import Watches from "./components/Watches";
 
 export default function Home() {
   return (
-    <div className="grid">
-      <div className="header">
+    <div className="grid grid-cols-[1.5fr_1fr_0.1fr] grid-rows-4 h-[95vh]">
         <Header />
-      </div>
       <Text />
       <BigImage />
       <BuyButton />
